@@ -24,4 +24,26 @@ public class Book {
     public String getTitle() {
         return title;
     }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public boolean getIsAvailable() {
+        return isAvailable;
+    }
+
+    public String isAvailable() {
+        // isAvailable이 true일 때 '대여가능' 출력
+        if (isAvailable) {
+            return "대여 가능";
+        } else {
+            return "대여 불가능";
+        }
+    }
+
+    //책 상세 정보 출력
+    public String getBookInformation() {
+        return "제목 : " + getTitle() + " | 저자 : " + getAuthor() + " | 대여 가능 여부 : " + isAvailable();
+    }
 }
