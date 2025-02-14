@@ -21,10 +21,17 @@ public class Main {
         library.addBook(bookC);
         library.addBook(bookD);
 
-        //Book에서 제목으로 검색
+        //도서관에서 책 전체 조회
+        library.getFindTitle();
+
+        //도서관에서 제목으로 검색
         library.getTitle("새로운 책4");
 
         library.getTitleB("새로운 책1");
+
+        //책 상세 정보 출력
+        library.getInformation();
+
 
     }
 }
