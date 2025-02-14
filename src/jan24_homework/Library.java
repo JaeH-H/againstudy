@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Library {
     //속
-    private List<String> libraries = new ArrayList<>();
     private List<Book> bookList = new ArrayList<>();
 
     //생
@@ -16,12 +15,8 @@ public class Library {
     }
 
     public void getFindTitle() {
-        for(int i = 0; i < libraries.size(); i++){
-            System.out.println(libraries.get(i) + " : 순서 : " + i);
-        }
-
         for(int i = 0; i < bookList.size(); i++){
-            System.out.println(bookList.get(i) + " : 순서 : " + i);
+            System.out.println(bookList.get(i).getTitle() + " : 순서 : " + i);
         }
 //        for(String title : libraries){
 //            System.out.println(title);
@@ -55,6 +50,14 @@ public class Library {
         }
         if (!found){
         System.out.println("책이 없습니다.");
+        }
+    }
+
+    //책 상세 정보 출력
+    public void getInformation() {
+        for(int i = 0; i < bookList.size(); i++) {
+            Book book = bookList.get(i);
+            System.out.println(book.getBookInformation());
         }
     }
 }
